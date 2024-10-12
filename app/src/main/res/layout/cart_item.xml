@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="16dp">
+
+<!-- Close Button -->
+<ImageButton
+    android:id="@+id/closeButton"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:src="@drawable/ic_close"
+    android:background="?android:attr/selectableItemBackgroundBorderless"
+    android:contentDescription="Close"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginEnd="8dp" /> <!-- Added margin to separate from text -->
+
+<!-- Product Title -->
+<TextView
+    android:id="@+id/cartProductName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Airpods"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/closeButton"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<!-- Vendor Name -->
+<TextView
+    android:id="@+id/vendorName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Namal Stores"
+    android:textSize="14sp"
+    android:textColor="#777777"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/closeButton"
+    app:layout_constraintTop_toBottomOf="@id/cartProductName" />
+
+<!-- Product Price -->
+<TextView
+    android:id="@+id/cartProductPrice"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Rs.80,000"
+    android:textSize="14sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/closeButton"
+    app:layout_constraintTop_toBottomOf="@id/vendorName" />
+
+<!-- Quantity Controls (Minus, Quantity Text, Plus) -->
+<LinearLayout
+    android:id="@+id/quantityControls"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/cartProductPrice"
+    android:layout_marginTop="8dp"> <!-- Added margin for spacing -->
+
+    <!-- Minus Button -->
+    <Button
+        android:id="@+id/decreaseQuantity"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:text="-"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:background="@drawable/button_border"
+        android:padding="0dp"
+        android:layout_marginEnd="4dp" />
+
+    <!-- Quantity Text -->
+    <TextView
+        android:id="@+id/cartProductQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center" />
+
+    <!-- Plus Button -->
+    <Button
+        android:id="@+id/increaseQuantity"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:text="+"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:background="@drawable/button_border"
+        android:padding="0dp"
+        android:layout_marginStart="4dp" />
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

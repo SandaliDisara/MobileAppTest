@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.VendorDetailsActivity">
+
+    <!-- Vendor Name -->
+    <TextView
+        android:id="@+id/vendorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vendor Name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center" />
+
+    <!-- Vendor Description -->
+    <TextView
+        android:id="@+id/vendorDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description of the Vendor"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/vendorName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center" />
+
+    <!-- Vendor Rating -->
+    <TextView
+        android:id="@+id/vendorRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="★ 4"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/vendorDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Divider -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        app:layout_constraintTop_toBottomOf="@id/vendorRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Add Comment Button -->
+    <Button
+        android:id="@+id/addCommentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Comment"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/vendorRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- RecyclerView for comments -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/addCommentButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

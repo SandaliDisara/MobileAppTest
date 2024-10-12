@@ -1,27 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".activities.LoginActivity">
 
-    <EditText
-        android:id="@+id/editTextEmail"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normy Tronics"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/purple_700" />
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_gravity="center" />
-</LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent"> <!-- Set background to transparent -->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:background="@android:color/white" /> <!-- Set background to white -->
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent"> <!-- Set background to transparent -->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:background="@android:color/white" /> <!-- Set background to white -->
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/purple_700"
+            android:textColor="@android:color/white" />
+
+        <!-- Create an account text -->
+        <TextView
+            android:id="@+id/textCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create an account"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

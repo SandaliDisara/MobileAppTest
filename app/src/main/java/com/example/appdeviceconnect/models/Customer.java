@@ -9,6 +9,7 @@ public class Customer {
     private String address;
     private String phoneNumber;
     private boolean isActive; // Represents if the customer's account is activated
+    private String dateCreated;
 
     // Default constructor
     public Customer() {
@@ -89,5 +90,13 @@ public class Customer {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
     }
 }

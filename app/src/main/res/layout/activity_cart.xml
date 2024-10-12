@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CartActivity">
+
+    <!-- RecyclerView for displaying cart items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/summaryLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Layout for Subtotal, VAT, and Net Total -->
+    <LinearLayout
+        android:id="@+id/summaryLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/checkoutButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Sub Total Text -->
+        <TextView
+            android:id="@+id/subTotalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub Total: Rs.75,000"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- VAT Text -->
+        <TextView
+            android:id="@+id/vatText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VAT: Rs.5,000"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Net Total Text -->
+        <TextView
+            android:id="@+id/netTotalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net Total: Rs.80,000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Go to Checkout Button -->
+    <Button
+        android:id="@+id/checkoutButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Checkout"
+        android:textSize="18sp"
+        android:backgroundTint="#7F41FE"
+        android:textColor="#FFFFFF"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

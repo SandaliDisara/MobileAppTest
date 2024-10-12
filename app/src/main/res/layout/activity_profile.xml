@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Circular TextView for initials -->
+    <TextView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="DW"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:background="@drawable/circle_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Name TextView -->
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name - Disara Wim"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <!-- Email TextView -->
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email - san@gmail.com"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:gravity="center" />
+
+    <!-- Address TextView -->
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address - Matara"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:gravity="center" />
+
+    <!-- Phone Number TextView -->
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number - 087678909"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:gravity="center" />
+
+    <!-- Account Created Date TextView -->
+    <TextView
+        android:id="@+id/tvCreatedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Created Date - 03/08/2024"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:gravity="center" />
+
+    <!-- Update Account Button -->
+    <Button
+        android:id="@+id/btnUpdateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Update Account"
+        app:layout_constraintTop_toBottomOf="@id/tvCreatedDate"
+        android:textColor="@color/purple_700"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_border" />
+
+    <!-- My Orders Button -->
+    <Button
+        android:id="@+id/btnMyOrders"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="My Orders"
+        android:textColor="@color/purple_700"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnUpdateAccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_border" />
+
+    <!-- Inactivate Account Button -->
+    <Button
+        android:id="@+id/btnInactivateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Inactivate Account"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@id/btnMyOrders"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

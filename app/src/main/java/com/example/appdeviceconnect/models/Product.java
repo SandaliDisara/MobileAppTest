@@ -7,8 +7,12 @@ public class Product {
     private double price;
     private String category;
     private int stock;
+    private boolean isActive;
+    private String vendorID;
 
-    // Getters and Setters
+    private String imageURL;
+
+    // Getters and Setters for all fields
     public String getId() {
         return id;
     }
@@ -55,5 +59,29 @@ public class Product {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public String getVendorId() {
+        return vendorID;  // Make sure you use vendorID here
+    }
+
+    public void setVendorId(String vendorID) {
+        this.vendorID = vendorID;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }
